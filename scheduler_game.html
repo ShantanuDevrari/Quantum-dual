@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quantum Duel Game</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet" />
+  <style>
+    .game-layout {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100vh;
+      padding: 1rem;
+    }
+
+    .vertical-bar {
+      width: 30px;
+      height: 90%;
+      background: #222;
+      border: 2px solid #00fff7;
+      border-radius: 10px;
+      position: relative;
+    }
+
+    .vertical-fill {
+      width: 100%;
+      height: 0;
+      background: #00fff7;
+      position: absolute;
+      bottom: 0;
+      transition: height 0.3s ease-in-out;
+    }
+
+    .center-box {
+      flex-grow: 1;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .question {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .options button {
+      margin: 0.5rem;
+      padding: 0.7rem 1.5rem;
+      border-radius: 10px;
+      background: transparent;
+      border: 2px solid #00fff7;
+      color: #00fff7;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .options button:hover {
+      background: #00fff7;
+      color: black;
+    }
+  </style>
+</head>
+<body class="cyberpunk">
+  <div class="game-layout">
+    <div class="vertical-bar">
+      <div id="player-fill" class="vertical-fill"></div>
+    </div>
+
+    <div class="center-box">
+      <h1 class="glow-text">Quantum Duel</h1>
+      <div id="question" class="question"></div>
+      <div id="options" class="options"></div>
+      <p id="scoreDisplay">Score: 0</p>
+    </div>
+
+    <div class="vertical-bar">
+      <div id="bot-fill" class="vertical-fill"></div>
+    </div>
+  </div>
+
+  <script src="js/scheduler_game.js"></script>
+</body>
+</html>
