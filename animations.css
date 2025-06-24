@@ -1,0 +1,103 @@
+/* Animations for Quantum Duel */
+
+/* Logo animation */
+@keyframes logoEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.logo-animation {
+  animation: logoEntrance 2s ease-out forwards;
+}
+
+/* Win Animation */
+@keyframes winEffect {
+  0% { color: lime; transform: scale(1); }
+  100% { color: yellow; transform: scale(1.1); }
+}
+
+.win-animation {
+  animation: winEffect 1.5s ease-in-out infinite alternate;
+}
+
+/* Lose Animation */
+@keyframes loseEffect {
+  0% { color: red; opacity: 0.8; }
+  100% { color: crimson; opacity: 1; }
+}
+
+.lose-animation {
+  animation: loseEffect 1.5s ease-in-out infinite alternate;
+}
+
+/* Button hover effects */
+.button-glow:hover {
+  background-color: #0ff;
+  box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+}
+
+/* Progress bar animation */
+@keyframes progressGrow {
+  from { height: 0%; }
+  to { height: 100%; }
+}
+
+.progress-fill {
+  animation: progressGrow 3s ease forwards;
+}
+
+/* Cyberpunk Text Typing */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+.typing-effect {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 2s steps(30, end) forwards;
+}
+
+/* Scoreboard Styles */
+.scoreboard-container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 800px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 0 15px #0ff;
+}
+
+.scoreboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #fff;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.scoreboard-table th, .scoreboard-table td {
+  border: 1px solid #0ff;
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+
+.scoreboard-table th {
+  background-color: rgba(0, 255, 255, 0.2);
+  color: #0ff;
+  text-transform: uppercase;
+}
+
+.scoreboard-table tbody tr:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.scoreboard-table tbody tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.5);
+}
